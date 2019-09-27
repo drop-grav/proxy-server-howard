@@ -12,18 +12,29 @@
         <!-- <div id='PhotoGallery'></div>
         <div id='Reservations'></div>
         <div id='Reviews'></div> -->
-        <div id='Recommendations'></div>
         <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
         <!-- <script src="http://localhost:3001/bundle.js"></script>
         <script src="http://localhost:3002/bundle.js"></script>
         <script src="http://localhost:3003/main.js"></script> -->
-        <script src="http://localhost:3004/listing/1/main.js"></script>
+        <div id="Photo-Gallery"></div>
+        <div id="Reservations" style="position:sticky; top: 100px;"></div>
+        <div id="reviews"></div>
+        <div id='Recommendations'></div>
+        
+        <script src="http://13.57.224.21:3000/main.js"></script>
+        <script src="https://drop-grav-recommendations.s3-us-west-1.amazonaws.com/static/bundle.js"></script>
+        <script src="http://ec2-54-183-105-172.us-west-1.compute.amazonaws.com:3100/bundle.js"></script>
+        <script src="http://3.14.6.11:3002/bundle.js"></script>
         <script>
-          const { React, ReactDOM, App: Recommendations} = RecommendationsModule;
+          const { React, ReactDOM, App: Recommendations } = RecommendationsModule;
           ReactDOM.render(
             React.createElement(Recommendations),
             document.getElementById('Recommendations')
+          );
+          ReactDOM.render(
+            React.createElement(Reservations.default),
+            document.getElementById('Reservations')
           );
         </script>
     </body>
